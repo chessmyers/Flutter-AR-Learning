@@ -28,10 +28,8 @@ class _ViewPageState extends State<ViewPage> {
 
   @override
   Widget build(BuildContext context) {
-    print("Module content");
-    print(widget.moduleContent.title);
     return Scaffold(
-      appBar: AppBar(title: Text(widget.moduleContent.title)),
+      appBar: AppBar(title: Text(widget.moduleContent.moduleName)),
       body: Center(
         child: Container(
           padding: const EdgeInsets.all(32),
@@ -43,7 +41,7 @@ class _ViewPageState extends State<ViewPage> {
               Container(
                 padding: EdgeInsets.all(16),
                 child: Text(
-                  widget.moduleContent.infoContent,
+                  widget.moduleContent.description,
                   softWrap: true,
                 ),
               ),
